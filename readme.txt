@@ -1,11 +1,11 @@
-=== Vk Fse Site Builder ===
+=== VK FSE Site Builder ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://example.com/
 Tags: comments, spam
-Requires at least: 4.5
+Requires at least: 5.9
 Tested up to: 5.9-RC2-52567
-Requires PHP: 5.6
-Stable tag: 0.1.0
+Requires PHP: 7.4
+Stable tag: 0.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
