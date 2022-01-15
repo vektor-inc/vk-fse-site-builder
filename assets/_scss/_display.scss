@@ -1,0 +1,50 @@
+@use "variables" as var;
+
+.d-none {
+	display: none;
+}
+.d-sm-up {
+	@media( max-width: var.$xs-max ){
+		display: none;
+	}
+}
+.d-md-up {
+	@media( max-width: var.$sm-max ){
+		display: none;
+	}
+}
+.d-lg-up {
+	@media( max-width: var.$md-max ){
+		display: none;
+	}
+}
+.d-xl-up {
+	@media( max-width: var.$lg-max ){
+		display: none;
+	}
+}
+.d-xs-down {
+	@media( min-width: var.$sm-max ){
+		display: none;
+	}
+}
+.d-xs-down {
+	@media( min-width: var.$sm-min ){
+		display: none;
+	}
+}
+.d-sm-down {
+	@media( min-width: var.$md-min ){
+		display: none;
+	}
+}
+.d-md-down {
+	@media( min-width: var.$lg-min ){
+		display: none;
+	}
+}
+.d-lg-down {
+	@media( min-width: var.$xl-min ){
+		display: none;
+	}
+}

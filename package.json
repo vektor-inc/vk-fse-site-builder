@@ -1,0 +1,36 @@
+{
+  "name": "vk-fse-site-builder",
+  "version": "0.0.0",
+  "author": "Vektor,Inc.",
+  "scripts": {
+    "sass": "sass --watch --style=compressed --no-source-map assets/_scss:assets/css inc/patterns-data/_scss:inc/patterns-data",
+    "build": "npm run build:css",
+    "build:css": "sass --style=compressed --no-source-map assets/_scss:assets/css inc/patterns-data/_scss:inc/patterns-data",
+    "composer:install:win": "wp-env run composer \"composer install\"",
+    "composer:install:mac": "wp-env run composer 'composer install'",
+    "phpunit": "wp-env run phpunit \"phpunit -c /var/www/html/wp-content/plugins/vk-fse-site-builder/phpunit.xml.dist --verbose\"",
+    "copy_dir": "node -e \"require('fs-extra').copySync('./assets', './dist/vk-fse-site-builder/assets') & require('fs-extra').copySync('./inc', './dist/vk-fse-site-builder/inc') & require('fs-extra').copySync('./languages', './dist/vk-fse-site-builder/languages')\"",
+    "copy_file": "cpx \"*.{txt,php,md,json}\" dist/vk-fse-site-builder",
+    "dist": "npm run copy_dir & npm run copy_file"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^4.1.0",
+    "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.7",
+    "grunt": "~1.4.1",
+    "grunt-wp-i18n": "~1.0.3",
+    "grunt-wp-readme-to-markdown": "~2.0.1",
+    "gulp": "^4.0.2",
+    "gulp-replace": "^1.1.3",
+    "node-sass": "^6.0.1",
+    "npm-check-updates": "^11.8.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.48.0",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0"
+  }
+}
