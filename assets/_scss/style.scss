@@ -23,37 +23,3 @@ ulitilies
 // .mt-xl {
 // 	margin-top: var(--wp--custom--spacing--medium);
 // }
-
-
-.nav--open--lg-up {
-	@media (min-width: var.$lg-min){
-		// 閉じるボタンを非表示にする
-		.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-			display: none;
-		}
-		// メニュー部分を表示にする
-		.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-			display: block;
-			// 以下デフォルトで指定されているプロパティ
-			// width: 100%;
-			// position: relative;
-			// z-index: auto;
-			// background-color: inherit;
-		}
-	}
-	@media (max-width: var.$md-max){
-		// 閉じるボタンを表示にする
-		.wp-block-navigation__responsive-container-open:not(.always-shown) {
-			display: block;
-		}
-		// メニュー部分を非表示にする
-		.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-		}
-	}
-}

@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     VK FSE Site Builder
  * Plugin URI:      https://github.com/vektor-inc/vk-fse-site-builder
- * Description:     
+ * Description:
  * Author:          Vektor,Inc.
  * Author URI:      https://vektor-inc.co.jp
  * Text Domain:     vk-fse-site-builder
@@ -19,13 +19,13 @@ define( 'VKSB_DIRECTORY_PATH', dirname( __FILE__ ) );
 define( 'VKSB_DIRECTORY_URL', plugins_url( '', __FILE__ ) );
 
 // Your code starts here.
-include( dirname( __FILE__ ) . '/patterns-data/class-register-patterns-from-json.php' );
+require dirname( __FILE__ ) . '/patterns-data/class-register-patterns-from-json.php';
 
 function vksb_support() {
 
 	// Enqueue editor styles.
 	// add_editor_style( 'assets/css/style.css' );
-	// add_editor_style( 'assets/css/editor-style.css' );
+	// add_editor_style( 'assets/css/editor.css' );
 }
 add_action( 'after_setup_theme', 'vksb_support' );
 
